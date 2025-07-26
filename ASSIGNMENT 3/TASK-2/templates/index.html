@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign Up Form</title>
+    </head>
+
+    <style>
+        body {
+            background-color: yellow;
+        }
+        input[type="submit"] {
+            margin: 0% 0% 0% 5%;
+            font-size: 20px;
+        }
+        input[type="text"] {
+            font-size: 20px;
+        }
+        .centered {
+            margin: auto;
+            width: 28%;
+            border: 3px solid green
+            padding: 10px
+        }
+    </style>
+
+    <body>
+        {% if error %}
+            <label style="color: red;">Error: {{ error }}</label>
+        {% endif %}
+        <div class="centered">
+            <form action="/submit" method="POST">
+                <label><b>Name: </label><br>
+                    <input name="name" type="text"><br>
+                <label>Location: </label><br>
+                    <input name="location" type="text"><br>
+                <label>Zip Code: </label><br>
+                    <input name="zip" type="text"><br>
+                <br><input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

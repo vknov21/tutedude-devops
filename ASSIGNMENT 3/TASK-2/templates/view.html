@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Data Stored</title>
+    </head>
+
+    <style>
+        body {
+            background-color: yellow;
+            font-size: 20px;
+        }
+        .centered {
+            margin: auto;
+            width: 28%;
+            border: 3px solid green
+            padding: 10px
+        }
+    </style>
+
+    <body>
+        <table border=3px class="centered">
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Zip Code</th>
+            </tr>
+            {% for name, location, zip in output_data %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{location}}</td>
+                <td>{{zip}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
